@@ -1,0 +1,125 @@
+/* Chatbot styles */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chatbot-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #f57c00;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chatbot-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.chatbot-form {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  z-index: 1001;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.chatbot-form h3 {
+  margin: 0 0 15px;
+  color: #333;
+}
+
+.chatbot-form label {
+  display: block;
+  margin: 10px 0;
+  color: #555;
+}
+
+.chatbot-form input,
+.chatbot-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.chatbot-form button {
+  margin-top: 15px;
+  padding: 8px 12px; /* Smaller size for both buttons */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f57c00;
+  color: white;
+  font-weight: bold;
+  font-size: 14px; /* Smaller font size for both buttons */
+}
+
+.chatbot-form .close-btn {
+  background-color: #aaa;
+  padding: 5px 10px; /* Smaller size for the close button */
+  font-size: 14px; /* Smaller font size for the close button */
+  margin-left: 10px;
+}
+
+.chatbot-form button:hover {
+  background-color: #e66a00;
+}
+
+/* Add fade-in animation for the popup */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+  .chatbot-form {
+    width: 90%; /* Full width on small screens */
+    bottom: 80px; /* Adjust positioning for smaller screens */
+    right: 10px;
+  }
+
+  .chatbot-container {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .chatbot-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 25px; /* Smaller icon on mobile */
+  }
+
+  .chatbot-form button {
+    font-size: 12px; /* Smaller button text on mobile */
+    padding: 6px 10px;
+  }
+
+  .chatbot-form .close-btn {
+    font-size: 12px;
+    padding: 4px 8px; /* Smaller close button */
+  }
+}

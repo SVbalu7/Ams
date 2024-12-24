@@ -1,0 +1,70 @@
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  margin-top: 35px; /* Sidebar starts below the navbar */
+  left: 0;
+  width: 250px; /* Fixed width for the sidebar */
+  height: 100%; /* Adjust height to account for navbar */
+  background-color: #de881e; /* Light peach color */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  overflow-y: auto; /* Allow scrolling if content exceeds the height */
+  transform: translateX(-100%); /* Initially hidden */
+  transition: transform 0.3s ease-in-out; /* Smooth slide-in effect */
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Slide in when opened */
+}
+
+.sidebar ul {
+  list-style: none; /* Remove bullets from the list */
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px; /* Add spacing for items */
+  font-size: 18px;
+}
+
+.sidebar ul li button {
+  width: 100%; /* Buttons take full width of the sidebar */
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  padding: 3px 0; /* Add vertical spacing */
+}
+
+.sidebar ul li button:hover {
+  color: rgb(245, 244, 241); /* Highlight text on hover */
+}
+
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: orange;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.toggle-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.clock {
+  font-size: 16px;
+  font-weight: bold;
+}

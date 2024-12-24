@@ -1,0 +1,218 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #ffdab9; /* Light Orange */
+  position: fixed;
+  top: 0;
+  left: -250px;
+  transition: 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 20px 10px;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  margin: 5px 0;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar ul li:hover {
+  background-color: #ffa07a; /* Soft Orange */
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Navbar Styling */
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: #ff8c00; /* Orange */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar .clock {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar .toggle {
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Page Content */
+.page-content {
+  margin-left: 260px; /* Adjust for sidebar */
+  padding: 80px 20px;
+}
+
+/* Chatbot Icon */
+.chatbot-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #ff8c00; /* Orange */
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.chatbot-icon:hover {
+  background-color: #ffa500; /* Lighter Orange */
+}
+
+.chatbot-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Chatbot Popup */
+.chatbot-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  display: none;
+}
+
+.chatbot-popup.active {
+  display: block;
+}
+
+.chatbot-popup h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.chatbot-popup label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+}
+
+.chatbot-popup input,
+.chatbot-popup textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.chatbot-popup button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chatbot-popup .submit-btn {
+  background-color: #ff8c00;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.chatbot-popup .submit-btn:hover {
+  background-color: #ffa500;
+}
+
+.chatbot-popup .close-btn {
+  background-color: #ddd;
+  color: #333;
+}
+
+.chatbot-popup .close-btn:hover {
+  background-color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .page-content {
+    margin-left: 210px;
+    padding: 70px 15px;
+  }
+
+  .chatbot-popup {
+    width: 250px;
+  }
+}
+.page-container {
+  padding: 80px 20px; /* Adjusted to account for the fixed navbar height */
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666;
+}
+.content {
+  padding: 80px 20px; /* Adjusted for the navbar height */
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
+}

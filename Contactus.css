@@ -1,0 +1,37 @@
+.contact-us-container {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-options {
+  margin-top: 20px;
+}
+
+.contact-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.email-btn {
+  background-color: #ffb300;
+  color: white;
+}
+
+.email-btn:hover {
+  background-color: #e4b96e;
+}

@@ -1,0 +1,89 @@
+.page-container {
+  margin-top: 80px; /* Adjusted for navbar height */
+  padding: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 28px; /* Font size increased for subjects heading */
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center; /* Center the heading */
+}
+
+.subjects {
+  margin-top: 20px;
+}
+
+.year {
+  font-size: 28px; /* Match font size with h1 */
+  color: #444;
+  font-weight: bold;
+  margin: 10px 0; /* Reduced margin between years */
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex; /* Flexbox for alignment */
+  align-items: center;
+  justify-content: space-between; /* Reduce gap between year and arrow */
+}
+
+.year:hover {
+  color: orange;
+}
+
+.dropdown-icon {
+  color: black; /* Black color for the ▼ emoji */
+  font-size: 22px; /* Slightly reduced size for balance */
+}
+
+.dropdown {
+  list-style: none;
+  margin: 0;
+  padding-left: 30px; /* Indentation for dropdown items */
+  animation: slideDown 0.6s ease-in-out; /* Dropdown animation */
+}
+
+.dropdown li {
+  font-size: 22px; /* Increased font size for subjects */
+  color: #555;
+  margin: 5px 0; /* Reduced gap between subjects */
+  cursor: pointer; /* Pointer cursor for dropdown subjects */
+  transition: color 0.3s ease;
+}
+
+.dropdown li:hover {
+  color: #007bff;
+}
+
+/* Dropdown Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .year {
+    font-size: 24px; /* Slightly smaller font size on mobile */
+  }
+
+  .dropdown li {
+    font-size: 20px; /* Adjust font size for subjects on mobile */
+  }
+}
